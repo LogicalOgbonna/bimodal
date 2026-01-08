@@ -2,52 +2,47 @@
 
 import { motion } from 'framer-motion';
 
-const stats = [
-  { value: '85%', label: 'DevOps Engagements' },
-  { value: '100+', label: 'Engineers Supported' },
-  { value: '250+', label: 'VMs Managed' },
-  { value: '1000+', label: 'RFPs Processed' },
-];
-
-const differentiators = [
+const values = [
   {
-    title: 'Goal-Aligned Team',
-    description: 'Engineers embedded in your vision from day one.',
+    title: 'Village Structure',
+    description: 'We believe in adding more resources than necessary because we believe most projects require more than one engineer.',
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
-        <circle cx="16" cy="16" r="14" stroke="currentColor" strokeWidth="2"/>
-        <path d="M16 8v8l6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="8" r="4"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="18" r="3"/>
+        <path d="M12 12v3M9 16l-2-1M15 16l2-1"/>
+      </svg>
+    ),
+  },
+  {
+    title: 'Goal-Aligned',
+    description: 'Engineers embedded in your vision from day one, working as an extension of your team with full context.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="1" fill="currentColor"/>
       </svg>
     ),
   },
   {
     title: 'Impact-Driven',
-    description: 'Solutions built for long-term value, not just quick wins.',
+    description: 'Solutions built for long-term value, not just quick wins. We focus on sustainable outcomes that scale.',
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
-        <path d="M16 4l3.5 11H28l-8 7 3 10-9-6-9 6 3-10-8-7h8.5L16 4z" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7l3-7z"/>
       </svg>
     ),
   },
   {
-    title: 'Village Structure',
-    description: 'More resources than necessary because complex projects need collaboration.',
+    title: 'Technical Excellence',
+    description: 'Our team consists of technical professionals with deep expertise across cloud native technologies.',
     icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
-        <circle cx="16" cy="10" r="4" stroke="currentColor" strokeWidth="2"/>
-        <circle cx="8" cy="22" r="4" stroke="currentColor" strokeWidth="2"/>
-        <circle cx="24" cy="22" r="4" stroke="currentColor" strokeWidth="2"/>
-        <path d="M16 14v4M12 20l-2-2M20 20l2-2" stroke="currentColor" strokeWidth="2"/>
-      </svg>
-    ),
-  },
-  {
-    title: 'Technical Leadership',
-    description: 'Our team consists of technical professionals across all functions.',
-    icon: (
-      <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8">
-        <rect x="4" y="8" width="24" height="16" rx="2" stroke="currentColor" strokeWidth="2"/>
-        <path d="M10 14l2 2-2 2M16 18h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.5">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+        <rect x="9" y="3" width="6" height="4" rx="1"/>
+        <path d="M9 12l2 2 4-4"/>
       </svg>
     ),
   },
@@ -55,75 +50,63 @@ const differentiators = [
 
 export default function AboutSection() {
   return (
-    <section className="py-32 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[var(--color-primary)]/20 to-transparent" />
-        <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-[var(--color-secondary)]/20 to-transparent" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section className="section bg-[var(--color-surface)]" id="about">
+      <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
+          {/* Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-[var(--color-primary)] text-sm font-semibold uppercase tracking-widest">Who We Are</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-              Trusted IT Consulting <span className="gradient-text">Since Day One</span>
+            <span className="badge mb-4">About Us</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Trusted IT Consulting Since <span className="gradient-text">Day One</span>
             </h2>
-            <p className="text-[var(--color-text-muted)] mb-8 leading-relaxed">
+            <p className="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
               BiModal Group, LLC is a trusted IT consulting firm delivering solutions across DevOps, 
               DevSecOps, Software Development, AI, Quality Assurance, Platform Engineering, and Security.
             </p>
-            <p className="text-[var(--color-text-muted)] mb-8 leading-relaxed">
+            <p className="text-[var(--color-text-secondary)] mb-8 leading-relaxed">
               We champion Infrastructure as Code (IaC) principles, ensuring that infrastructure changes 
               are codified, peer-reviewed, and thoroughly tested. Our continuous delivery pipelines 
               automate deployment while monitoring frameworks validate changes and enforce operational excellence.
             </p>
-            
+
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl font-bold gradient-text">{stat.value}</div>
-                  <div className="text-xs text-[var(--color-text-muted)] mt-1">{stat.label}</div>
-                </motion.div>
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { value: '85%', label: 'DevOps Engagements' },
+                { value: '100+', label: 'Engineers Supported' },
+              ].map((stat, index) => (
+                <div key={index} className="text-center p-4 rounded-xl bg-[var(--color-darker)] border border-[var(--color-border)]">
+                  <div className="stat-value mb-1">{stat.value}</div>
+                  <div className="text-sm text-[var(--color-text-muted)]">{stat.label}</div>
+                </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Right content - Differentiators */}
+          {/* Values grid */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-4"
           >
-            {differentiators.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                className="gradient-border p-6 card-hover"
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="card card-sm group"
               >
-                <div className="text-[var(--color-primary)] mb-4">
-                  {item.icon}
+                <div className="icon-wrapper mb-4 text-[var(--color-primary)] group-hover:scale-110 transition-transform">
+                  {value.icon}
                 </div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-[var(--color-text-muted)]">{item.description}</p>
-              </motion.div>
+                <h3 className="font-semibold mb-2 text-white">{value.title}</h3>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
             ))}
           </motion.div>
         </div>
@@ -131,4 +114,3 @@ export default function AboutSection() {
     </section>
   );
 }
-

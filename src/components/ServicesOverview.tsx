@@ -7,114 +7,77 @@ const services = [
   {
     id: 'devops',
     title: 'DevOps',
-    description: 'CI/CD pipelines, Infrastructure as Code, GitOps implementation, and cloud platform orchestration.',
+    description: 'Accelerate your delivery with CI/CD pipelines, Infrastructure as Code, GitOps practices, and cloud platform orchestration.',
+    features: ['CI/CD Pipeline Design', 'Infrastructure as Code', 'GitOps with ArgoCD', 'Kubernetes Management'],
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <circle cx="24" cy="24" r="20" stroke="url(#devops-grad)" strokeWidth="2" fill="none"/>
-        <path d="M24 14v10l8 5" stroke="url(#devops-grad)" strokeWidth="2" strokeLinecap="round"/>
-        <motion.circle
-          cx="24"
-          cy="24"
-          r="4"
-          fill="url(#devops-grad)"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-        <defs>
-          <linearGradient id="devops-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#ff6b35"/>
-            <stop offset="1" stopColor="#f7931e"/>
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
-  },
-  {
-    id: 'devsecops',
-    title: 'DevSecOps',
-    description: 'Security integration throughout the development lifecycle with Policy as Code and compliance automation.',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <path d="M24 4L6 12v12c0 11.11 7.67 21.47 18 24 10.33-2.53 18-12.89 18-24V12L24 4z" stroke="url(#sec-grad)" strokeWidth="2" fill="none"/>
-        <path d="M20 24l4 4 8-8" stroke="url(#sec-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <defs>
-          <linearGradient id="sec-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#f7931e"/>
-            <stop offset="1" stopColor="#ffc107"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2"/>
+        <path d="M24 14v10l8 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="24" cy="24" r="4" fill="currentColor"/>
       </svg>
     ),
   },
   {
     id: 'platform',
     title: 'Platform Engineering',
-    description: 'Internal Developer Platforms, Backstage portals, self-service infrastructure, and golden paths.',
+    description: 'Build Internal Developer Platforms that reduce cognitive load and empower your teams with self-service infrastructure.',
+    features: ['Backstage Portals', 'Kratix & Crossplane', 'Golden Paths', 'Developer Self-Service'],
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <rect x="8" y="8" width="12" height="12" rx="2" stroke="url(#platform-grad)" strokeWidth="2"/>
-        <rect x="28" y="8" width="12" height="12" rx="2" stroke="url(#platform-grad)" strokeWidth="2"/>
-        <rect x="8" y="28" width="12" height="12" rx="2" stroke="url(#platform-grad)" strokeWidth="2"/>
-        <rect x="28" y="28" width="12" height="12" rx="2" stroke="url(#platform-grad)" strokeWidth="2"/>
-        <circle cx="24" cy="24" r="4" fill="url(#platform-grad)"/>
-        <defs>
-          <linearGradient id="platform-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#ff6b35"/>
-            <stop offset="1" stopColor="#ff8c5a"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="28" y="8" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="8" y="28" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <rect x="28" y="28" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="24" cy="24" r="4" fill="currentColor"/>
+      </svg>
+    ),
+  },
+  {
+    id: 'devsecops',
+    title: 'DevSecOps',
+    description: 'Embed security throughout the development lifecycle with Policy as Code, compliance automation, and shift-left practices.',
+    features: ['Policy as Code (OPA)', 'Compliance Automation', 'Container Security', 'SOC 2 & HIPAA Support'],
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <path d="M24 4L6 12v12c0 11.11 7.67 21.47 18 24 10.33-2.53 18-12.89 18-24V12L24 4z" stroke="currentColor" strokeWidth="2"/>
+        <path d="M18 24l5 5 9-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
   {
     id: 'ai',
-    title: 'AI & ML',
-    description: 'Enterprise AI deployment, RAG platforms, MLOps pipelines, and secure model serving infrastructure.',
+    title: 'AI & ML Solutions',
+    description: 'Deploy enterprise AI infrastructure with security, compliance, and scalability built-in. From RAG to MLOps.',
+    features: ['Enterprise RAG', 'MLOps Pipelines', 'Private AI Deployment', 'Model Observability'],
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <circle cx="24" cy="14" r="6" stroke="url(#ai-grad)" strokeWidth="2"/>
-        <circle cx="12" cy="32" r="6" stroke="url(#ai-grad)" strokeWidth="2"/>
-        <circle cx="36" cy="32" r="6" stroke="url(#ai-grad)" strokeWidth="2"/>
-        <path d="M24 20v6M18 28l-3-2M30 28l3-2" stroke="url(#ai-grad)" strokeWidth="2"/>
-        <defs>
-          <linearGradient id="ai-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#ffc107"/>
-            <stop offset="1" stopColor="#ff6b35"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <circle cx="24" cy="14" r="6" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="12" cy="34" r="6" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="36" cy="34" r="6" stroke="currentColor" strokeWidth="2"/>
+        <path d="M24 20v6M18 30l-3-2M30 30l3-2" stroke="currentColor" strokeWidth="2"/>
       </svg>
     ),
   },
   {
-    id: 'software',
-    title: 'Software Development',
-    description: 'Full-stack development, microservices architecture, and modern application design.',
+    id: 'cloud',
+    title: 'Cloud Consulting',
+    description: 'Expert guidance on AWS, Azure, and GCP. From migration to optimization, we help you maximize cloud value.',
+    features: ['Cloud Migration', 'Multi-Cloud Strategy', 'Cost Optimization', 'FinOps Implementation'],
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <path d="M14 16l-8 8 8 8M34 16l8 8-8 8M28 10l-8 28" stroke="url(#dev-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <defs>
-          <linearGradient id="dev-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#ff6b35"/>
-            <stop offset="1" stopColor="#f7931e"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <path d="M36 22a8 8 0 00-16 0c-4.4 0-8 3.6-8 8s3.6 8 8 8h16a8 8 0 000-16z" stroke="currentColor" strokeWidth="2"/>
       </svg>
     ),
   },
   {
     id: 'qa',
     title: 'Quality Assurance',
-    description: 'Automated testing frameworks, quality gates, and comprehensive test strategy implementation.',
+    description: 'Comprehensive testing strategies with automation frameworks, quality gates, and continuous quality monitoring.',
+    features: ['Test Automation', 'E2E Testing', 'Performance Testing', 'Quality Gates'],
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-12 h-12">
-        <circle cx="24" cy="24" r="18" stroke="url(#qa-grad)" strokeWidth="2" strokeDasharray="4 4"/>
-        <path d="M17 24l5 5 9-9" stroke="url(#qa-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <defs>
-          <linearGradient id="qa-grad" x1="0" y1="0" x2="48" y2="48">
-            <stop stopColor="#f7931e"/>
-            <stop offset="1" stopColor="#ffc107"/>
-          </linearGradient>
-        </defs>
+      <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+        <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>
+        <path d="M17 24l5 5 9-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -122,8 +85,8 @@ const services = [
 
 export default function ServicesOverview() {
   return (
-    <section className="py-32 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="section" id="services">
+      <div className="container">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -131,18 +94,18 @@ export default function ServicesOverview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--color-primary)] text-sm font-semibold uppercase tracking-widest">What We Do</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-            <span className="gradient-text">Services</span> We Provide
+          <span className="badge mb-4">Our Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Consulting Services to <span className="gradient-text">Accelerate</span> Your Growth
           </h2>
-          <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
-            From infrastructure automation to AI integration, we deliver comprehensive IT solutions 
-            that drive digital transformation.
+          <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
+            From infrastructure automation to AI integration, we deliver comprehensive cloud native 
+            solutions that drive digital transformation.
           </p>
         </motion.div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -150,41 +113,48 @@ export default function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group gradient-border p-8 card-hover"
             >
-              <div className="mb-6 transition-transform group-hover:scale-110">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-[var(--color-primary)] transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-                {service.description}
-              </p>
-              <Link 
-                href={`/services#${service.id}`}
-                className="inline-flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium"
-              >
-                Learn more
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M6 12l4-4-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <Link href={`/services#${service.id}`} className="block h-full">
+                <div className="card h-full group">
+                  {/* Icon */}
+                  <div className="icon-wrapper mb-6 text-[var(--color-primary)] group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-[var(--color-primary)] transition-colors">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-[var(--color-text-secondary)] text-sm mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="flex-shrink-0 text-[var(--color-primary)]">
+                          <path d="M3 7l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Link */}
+                  <div className="link-arrow mt-auto">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
               </Link>
             </motion.div>
           ))}
         </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <Link href="/services" className="btn-primary">
-            <span>View All Services</span>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
