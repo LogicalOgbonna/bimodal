@@ -5,27 +5,27 @@ import { motion } from 'framer-motion';
 const testimonials = [
   {
     quote: "BiModal was quickly able to set up a team and realize our platform engineering vision. Their expertise in Kubernetes and GitOps was second to none, and they delivered beyond our expectations.",
-    author: "VP of Engineering",
-    company: "Enterprise Client",
-    initials: "VP",
+    author: "David Coulter",
+    company: "CTO BlueAlly",
+    initials: "DC",
   },
   {
     quote: "The team's deep understanding of DevOps practices and their ability to implement Infrastructure as Code transformed how we deploy and manage our applications.",
-    author: "CTO",
-    company: "Tech Startup",
-    initials: "CT",
+    author: "Todd Michael Bushnell",
+    company: "VP of DevOps Strata Consulting",
+    initials: "TB",
   },
   {
     quote: "Working with BiModal on our AI infrastructure was a game-changer. They built a secure, scalable RAG platform that processes thousands of documents daily.",
-    author: "Director of AI",
-    company: "Fortune 500 Company",
-    initials: "DA",
+    author: "Amir Emadzadeh",
+    company: "Team Lead Genentech",
+    initials: "AE",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="section bg-[var(--color-surface)]">
+    <section className="section bg-(--color-surface)">
       <div className="container">
         {/* Section header */}
         <motion.div
@@ -38,7 +38,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             What Our <span className="gradient-text">Clients</span> Say
           </h2>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          <p className="text-(--color-text-secondary) max-w-2xl mx-auto">
             We&apos;re proud to have helped organizations achieve their digital transformation goals.
           </p>
         </motion.div>
